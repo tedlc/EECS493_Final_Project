@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+
+}
+::selection{
+  color: #ffff;
+  background: rgb(142, 73, 232);
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: rgb(16, 42, 108);
+  overflow: hidden;
+  border-radius: 3px;
+  position: fixed;
+  width: 99%;
+  z-index: 99;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Style the links inside the navigation bar */
+.topnav button {
+  float: right;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  background-color: transparent;
+  border: 0px;
+}
+.topnav button:hover {
+  background-color: rgb(146, 201, 223);
+  color: black;
+  border-radius: 3px;
+}
+
+.topnav .clock {
+  z-index: 99;
+  display: inline-block; 
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: rgb(146, 201, 223);
+  color: black;
+  border-radius: 3px;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #f6ff00;
+  color: black;
+  border-radius: 3px;
+}
+
+.setting{
+  background-color: rgb(243, 246, 234);
+  overflow: hidden;
+  border-radius: 3px;
+  position: fixed;
+  top: 5.5%;
+  z-index: 99;
+  width: 300px;
+  height: 300px;
+  right: 5px;
+  opacity: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.setting button{
+  width: 80%;
+  height: 20%;
+  border: none;
+  color: #fff;
+  margin-left: 20px;
+  font-size: 21px;
+  background: #91950d;
+  cursor: pointer;
+  border-radius: 3px;
+}
+.setting header{
+  font-size: 30px;
+  font-weight: 500;
+  top: -10%;
+}
+
+body{
+  width: 100%;
+  padding: 10px;
+  position: relative;
+}
+
+.wrapper{
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  width: 400px;
+  height: 400px;
+  margin: 80px 10px 20px;
+  padding: 25px;
+  border-radius: 5px;
+  
+}
+.wrapper2 {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  width: 700px;
+  height: 400px;
+  margin: 80px 10px 20px;
+  padding: 25px;
+  border-radius: 5px;
+}
+
+.wrapper header{
+  font-size: 30px;
+  font-weight: 500;
+}
+.wrapper .inputField{
+  margin: 20px 5px;
+  width: 100%;
+  display: flex;
+  height: 85%;
+
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.inputField input{
+  width: 85%;
+  height: 15%;
+  outline: none;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  font-size: 17px;
+  padding-left: 15px;
+  transition: all 0.3s ease;
+}
+
+.inputField textarea{
+    height: 50%;
+    width: 85%;
+    padding: 10px;
+    outline: none;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    font-size: 17px;
+    padding-left: 15px;
+    transition: all 0.3s ease;
+    resize: none;
+}
+
+.inputField .Btn{
+    width: 85%;
+    margin-top: 3%;
+    display: flex;
+
+    height: 20%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.inputField input:focus{
+  border-color: #8E49E8;
+}
+
+.inputField button{
+  width: 75px;
+  height: 100%;
+  border: none;
+  color: #fff;
+  margin-left: 20px;
+  font-size: 21px;
+  outline: none;
+  background: #8E49E8;
+  cursor: pointer;
+  border-radius: 3px;
+  opacity: 0.6;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.hidden{
+    visibility: hidden;
+}
+
+
+.inputField button:hover,
+.footer button:hover{
+  background: #721ce3;
+}
+.inputField button.active{
+  opacity: 1;
+  pointer-events: auto;
+}
+.wrapper .todoList{
+  max-height: 250px;
+  overflow-y: auto;
+}
+.todoList li{
+  position: relative;
+  list-style: none;
+  margin-bottom: 8px;
+  background: #f2f2f2;
+  border-radius: 3px;
+  padding: 10px 15px;
+  cursor: default;
+  overflow: hidden;
+  word-wrap: break-word;
+}
+.todoList li .icon{
+  position: absolute;
+  right: -45px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #e74c3c;
+  width: 45px;
+  text-align: center;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 0 3px 3px 0;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.todoList li:hover .icon{
+  right: 0px;
+}
+
+.wrapper .footer{
+  display: flex;
+  width: 100%;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+
+.footer button{
+  padding: 6px 10px;
+  border-radius: 3px;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-weight: 400;
+  font-size: 16px;
+  margin-left: 5px;
+  background: #8E49E8;
+  cursor: pointer;
+  user-select: none;
+  opacity: 0.6;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+.footer button.active{
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.masterDiv{
+  height: 100%;
+}
+
+.masterDiv2 {
+  height: 100%;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+  flex-direction: column;
+}
+
+.musicButton {
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+  border: none;
+  background-color: transparent;
+}
+
+.musicBtn {
+  width: 100%;
+  height: 100%;
+}
+
+#musicbox {
+  display: flex;
+  align-items: center;
+  position: relative;
+  top: 25%;
+  left: 23%
+}
+
+.bodyLight{
+  background: #8ee8d3;
+  color: black;
+}
+.bodyDark{
+  background: #192925;
+  color: rgb(235, 207, 154);
+}
+
+.wapperLight {
+  box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
+  background: #fff;
+}
+.wapperDark {
+  box-shadow: 0px 10px 15px rgba(208, 208, 165, 0.157);
+  background: rgb(109, 122, 131);
+}

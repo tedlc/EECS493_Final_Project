@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Remind M</title>
+    <script src='./scripts/jquery.min.js'></script>
+    <link rel="stylesheet" href="./style/index.css">
+    <link rel="stylesheet" href="./style/timer.css">
+    <link rel="stylesheet" href="./style/todolist.css">
+    <link rel="stylesheet" href="./style/weatherwidget.css">
+    <link rel="stylesheet" href="./style/water.css">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+
+
+<body class="bodyLight">
+  <!--Heading-->
+    <div class="topnav">
+      <a class="active" href="./index.html">RemindME</a>
+      <a href="./about.html">About</a>
+      <button>Setting</button>
+      <div class="clock"> </div>
+    </div>
+  <!--Setting-->
+  <div class="setting hidden">
+    <header>Setting Pannel</header>
+    <br>
+    <br>
+    <button class="themeSwitch">Change to Dark Mode</button>
+    <br>
+    <button class="closeBtn">Close</button>
+  </div>
+
+
+<!--masterDiv-->
+<div class="masterDiv">
+  <!--todolist-->  
+  <div class="wrapper wapperLight">
+    <header>Add your new todo</header>
+    <div class="inputField">
+        <label>Task Name</label>
+        <input type="text" id="task_name" placeholder="Eg: Drink H2O" onfocus="this.value=''">
+        <label>Select Time</label>
+        <input type="datetime-local" id="task_time" placeholder="Enter Time" required>
+        <label>Add some notes</label>          
+        <textarea id="task_summary" onfocus="this.value=''" name="summary" required>Enter Task Summary...
+        </textarea>
+
+        <div class="Btn">
+            <button class="addBtn"><i class="fas fa-plus"></i></button>
+            <button class="clearBtn">Clear</button>
+        </div>
+        
+    </div>
+  </div>
+  <!--todolist-->
+  <div class="wrapper wapperLight">
+    <header>Your Current TodoList</header>
+
+    <ul class="todoList">
+      <!-- data are comes from local storage -->
+    </ul>
+
+    <div class="footer">
+      <span>You have <span class="pendingTasks"></span> pending tasks</span>
+      <button>Clear All</button>
+    </div>
+  </div>
+
+
+  <!--weatherwidget-->
+  <div class="wrapper wapperLight">
+    <div class="weatherwidget">
+        <a class="weatherwidget-io" href="https://forecast7.com/en/42d28n83d74/ann-arbor/" data-label_1="ANN ARBOR"
+          data-label_2="WEATHER" data-theme="blank">ANN ARBOR WEATHER</a>
+        <script>
+          !function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (!d.getElementById(id)) {
+              js = d.createElement(s); js.id = id;
+              js.src = 'https://weatherwidget.io/js/widget.min.js';
+              fjs.parentNode.insertBefore(js, fjs);
+            }
+          }(document, 'script', 'weatherwidget-io-js');
+        </script>
+      </div>
+  </div>
+
+  <!--Timer-->
+  <div class="wrapper wapperLight">
+    <div id="timer"></div>
+    <script src="scripts/timer.js"></script>
+  </div>
+
+    <!--Music-->
+    <div class="wrapper wapperLight">
+      <header>Relax and play some music!</header>
+      <div id="musicbox">
+          <audio src="music/guitar.mp3" id="audioSong"></audio>
+
+          <button class="musicButton" id="prevSong">
+            <img class="musicBtn" src="prevSongBtn.png" alt="">
+          </button>
+
+          <button class="musicButton" id="playSong">
+            <img id="nowBtn" class="musicBtn" src="playSongBtn.png" alt="">
+          </button>
+
+          <button class="musicButton" id="nextSong">
+            <img class="musicBtn" src="nextSongBtn.png" alt="">
+          </button>
+      </div>
+      <script src='music.js'></script>
+    </div>
+      
+
+    <!--Water-->
+    <div class="wrapper wapperLight">
+    <div class="drink">
+        <h1 id="title">Daily Water Record</h1>
+        <button id="final" onclick="addOne()">Click Me! If you finished 1 Cup Of H2O</button>
+        <div class="add_image">
+          <img class="image2" id="imge1" src="./style/water.jpeg">
+          <img class="image2" id="imge2" src="./style/water.jpeg">
+          <img class="image2" id="imge3" src="./style/water.jpeg">
+          <img class="image2" id="imge4" src="./style/water.jpeg">
+          <img class="image2" id="imge5" src="./style/water.jpeg">
+          <img class="image2" id="imge6" src="./style/water.jpeg">
+          <img class="image2" id="imge7" src="./style/water.jpeg">
+          <img class="image2" id="imge8" src="./style/water.jpeg">
+          <img class="image2" id="imge9" src="./style/water.jpeg">
+          <img class="image2" id="imge10" src="./style/water.jpeg">
+          <img class="image2" id="imge11" src="./style/water.jpeg">
+          <img class="image2" id="imge12" src="./style/water.jpeg">
+          <img class="image2" id="imge13" src="./style/water.jpeg">
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>You have drink:
+        <span id="textbox1">0</span></p>
+        <p id="complete">Remember to drive one glass of water each hour! </p>
+        <p id="">Your last day intake was:<span id="intake"></span> </p>   
+    </div>
+
+    </div>
+
+
+  <script src="script.js"></script>
+</div>
+
+</body>
+</html>

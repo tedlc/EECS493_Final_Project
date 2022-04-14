@@ -1,0 +1,7 @@
+.weatherwidget{
+    border: 10px;
+    position: relative;
+    display: inline-block;
+    width: 350px;
+    cursor: move;
+};

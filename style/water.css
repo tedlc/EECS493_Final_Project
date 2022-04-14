@@ -1,0 +1,80 @@
+.drink {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+    flex-direction: column;
+	gap: 5%;
+}
+
+.drink #title{
+	color: blue;
+	text-align: center;
+}
+
+.drink #img1{
+	border-radius: 50px;
+	height: 150px;
+	width: 100px;
+}
+
+.drink button{
+	width: 60%;
+	height: 40%;
+	border: none;
+	color: #fff;
+	margin-left: 20px;
+	font-size: 21px;
+	outline: none;
+	background: #8E49E8;
+	cursor: pointer;
+	border-radius: 3px;
+}
+
+.drink #textbox1 {
+	width: 30px;
+	border-radius: 5px;
+}
+.drink .info {
+	margin-top : 40px;
+	font-size: 22px;
+	text-align: center;
+	color: blue;
+	text-align: left;
+
+}
+.drink .image2 {
+	display: none;
+	padding: 5px;
+	height: 60px;
+	width: 60px;
+	border-radius: 20px;
+	
+}
+
+.wrapper2 .footer{
+	position: absolute;
+	bottom: 10%;
+	width: 100%;
+
+}
+.wrapper2 .footer p{
+	text-align: center;
+}
+
+.drink .add_image{
+	padding-left: -300px;
+}
+
+#imge1{background-color: #C60505}  
+#imge2{background-color: #DC0505}
+#imge3{background-color: #F60707}
+#imge4{background-color: #D15309}
+#imge5{background-color: #DD5809}
+#imge6{background-color: #F1600A}
+#imge7{background-color: #FD650B}
+#imge8{background-color: #B9F718}
+#imge9{background-color: #A4DB14}
+#imge10{background-color: #9BD00F}
+#imge11{background-color:#3FC613}
+#imge12{background-color: #37B20F}
+#imge13{background-color: #36B10E}
