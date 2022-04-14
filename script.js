@@ -203,8 +203,6 @@ function setTheme(themeName) {
     themeSwitch.innerHTML = "Change to Light Mode";
     body.classList.add("bodyDark");
     body.classList.remove("bodyLight");
-    wrapper2.classList.remove("wapperLight");
-    wrapper2.classList.add("wapperDark");
     wrapper.forEach((x) => {
       x.classList.remove("wapperLight");
       x.classList.add("wapperDark");
@@ -218,7 +216,5 @@ function setTheme(themeName) {
       x.classList.remove("wapperDark");
       x.classList.add("wapperLight");
     })
-    wrapper2.classList.remove("wapperDark");
-    wrapper2.classList.add("wapperLight");
   }
 }
