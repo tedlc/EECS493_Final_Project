@@ -51,7 +51,7 @@ addBtn.onclick = ()=>{ //when user click on plus icon button
     //getting input field value
     var timeData = taskTime.value;
     if(timeData.trim() == 0){
-        window.alert("Pleace indicate the Due date");
+        window.alert("Please indicate the Due date");
         return;
     }
 
