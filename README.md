@@ -1,7 +1,12 @@
 Group 25
+
 EECS 493 WN 2022
+
 Final Project
-Hi-fi Prototype 
+
+Hi-fi Prototype
+
+Reference:
 
 Weather Widget Source code reference: https://weatherwidget.io/
 
